@@ -35,6 +35,12 @@ AUTH=23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12C
 NAMESPACE=guest
 ```
 
+Note that all `wsk` commands have to use `-i` flag because the SSL certificate of the OpenWhisk API endpoint is self-signed.
+
+```
+wsk -i namespace get
+```
+
 ## Stop/remove
 
 Quitting Docker for Mac or stopping it's Kubernetes will shut things down. When starting it again, openwhisk should come back up.
