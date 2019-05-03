@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./helm delete openwhisk --purge
+$(dirname $0)/helm delete openwhisk --purge
