@@ -13,6 +13,14 @@ This is a simple way to install and run [Apache OpenWhisk](https://openwhisk.apa
 
 ## Install
 
+Super simple:
+
+```
+docker run --net=host -v ~/.kube:/root/.kube alexkli/openwhisk-kubernetes-installer
+```
+
+Alternatively use this script from this git repository (which might do some more checks in the future):
+
 ```
 ./install-openwhisk.sh
 ```
