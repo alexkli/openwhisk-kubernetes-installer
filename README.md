@@ -13,7 +13,7 @@ This is a simple way to install and run [Apache OpenWhisk](https://openwhisk.apa
 
 ## Install
 
-Super simple:
+Single command:
 
 ```
 docker run --net=host -v ~/.kube:/root/.kube alexkli/openwhisk-kubernetes-installer
@@ -25,20 +25,32 @@ Alternatively use this script from this git repository (which might do some more
 ./install-openwhisk.sh
 ```
 
-This might take a few minutes.
+⏰ This might take a few minutes.
 
-Then use this as `~/.wskprops`:
+The output should end with instructions how to install [wsk](https://github.com/apache/incubator-openwhisk-cli) and with the `~/.wskprops` to use:
 
 ```
-APIHOST=localhost:31001
+APIHOST=http://localhost:31001
 AUTH=23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
 NAMESPACE=guest
 ```
 
-Note that all `wsk` commands have to use `-i` flag because the SSL certificate of the OpenWhisk API endpoint is self-signed.
+Openwhisk experts: Please note that the API host is `HTTP` and not `HTTPS`, which avoids the annoying self-signed certificate issue that would have required use of `wsk -i` everywhere. Not using SSL is fine since this is only meant for local development installations.
+
+Verify that it works:
 
 ```
-wsk -i namespace get
+wsk namespace get
+```
+
+Should output:
+
+```
+Entities in namespace: guest
+packages
+actions
+triggers
+rules
 ```
 
 ## Stop/remove

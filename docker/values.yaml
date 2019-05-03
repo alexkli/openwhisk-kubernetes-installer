@@ -5,4 +5,8 @@ whisk:
     apiHostPort: 31001
 
 nginx:
+  # below swap of ports is correct - trick to use HTTP port 80 as httpsNodePort
+  # without having to modify the helm chart in openwhisk/templates/nginx-svc.yaml
+  httpPort: 443
+  httpsPort: 80
   httpsNodePort: 31001
