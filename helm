@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker run --net=host -v ~/.kube:/root/.kube alexkli/openwhisk-kubernetes-installer /bin/bash -c "helm $*"

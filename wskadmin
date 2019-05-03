@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kubectl -n openwhisk -ti exec openwhisk-wskadmin -- wskadmin $@
