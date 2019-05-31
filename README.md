@@ -1,3 +1,7 @@
+[![](https://images.microbadger.com/badges/version/alexkli/openwhisk-kubernetes-installer.svg)](https://microbadger.com/images/alexkli/openwhisk-kubernetes-installer) [![](https://images.microbadger.com/badges/image/alexkli/openwhisk-kubernetes-installer.svg)](https://microbadger.com/images/alexkli/openwhisk-kubernetes-installer "Get your own image badge on microbadger.com")
+
+![](http://dockeri.co/image/alexkli/openwhisk-kubernetes-installer)
+
 openwhisk-kubernetes-installer
 ==============================
 
